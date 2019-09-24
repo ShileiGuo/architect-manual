@@ -1,31 +1,79 @@
 {
-    "plugins": ["anchors", "ga", "github-buttons"],
+    "author": "Tony Deng",
+    "description": "架构师手册",
+    "language": "zh-hans",
+    "title": "架构师手册",
+    "plugins": [
+        "anchors", 
+        "ga", 
+        "splitter",
+        "todo",
+        "alerts",
+        "image-captions",
+        "tbfed-pagefooter@^0.0.1",
+        "github-buttons@2.1.0",
+        "-lunr", "-search", "search-plus",
+        "advanced-emoji",
+        "simple-page-toc",
+        "anchor-navigation-ex",
+        "theme-comscore",
+        "download-pdf-link",
+        "-highlight",
+        "prism",
+        "prism-themes",
+        "code"
+    ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-80673215-1"
         },
         "github-buttons": {
-            "buttons": [{
-                    "user": "tonydeng",
-                    "repo": "architect-manual",
-                    "type": "star",
-                    "size": "small",
-                    "count": true
-                },
-                {
-                    "user": "tonydeng",
-                    "type": "follow",
-                    "size": "small",
-                    "width": "170",
-                    "count": true
-                }, {
-                    "user": "tonydeng",
-                    "repo": "architect-manual",
-                    "type": "watch",
-                    "size": "small",
-                    "count": true
-                }
+            "repo": "tonydeng/architect-manual",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "anchor-navigation-ex": {
+            "showLevel": true,
+            "associatedWithSummary": true,
+            "printLog": false,
+            "multipleH1": false,
+            "mode": "float",
+            "float": {
+                "showLevelIcon": true,
+                "level1Icon": "fa fa-hand-o-right",
+                "level2Icon": "fa fa-hand-o-right",
+                "level3Icon": "fa fa-hand-o-right"
+            },
+            "pageTop": {
+                "showLevelIcon": false,
+                "level1Icon": "fa fa-hand-o-right",
+                "level2Icon": "fa fa-hand-o-right",
+                "level3Icon": "fa fa-hand-o-right"
+            }
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
             ]
+        },
+        "sitemap-general": {
+            "prefix": "https://tonydeng.github.io/architect-manual/"
+        },
+        "download-pdf-link": {
+            "base": "https://www.gitbook.com/download/pdf/book/tonydeng/architect-manual",
+            "label": "Download PDF",
+            "multilingual": false
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © Tony Deng 2019",
+            "modify_label": " Last Updated at ",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
         }
     }
 }
