@@ -1,0 +1,770 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3. “都是C++的错，换C重写” · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.4.html" />
+    
+    
+    <link rel="prev" href="2.2.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"tonydeng","repo":"architect-manual","type":"star","size":"small","count":true},{"user":"tonydeng","type":"follow","size":"small","width":"170","count":true},{"user":"tonydeng","repo":"architect-manual","type":"watch","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    架构师手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ch1/">
+            
+                <a href="../ch1/">
+            
+                    
+                    第1章 手册简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../ch1/1.1.html">
+            
+                <a href="../ch1/1.1.html">
+            
+                    
+                    1.1. 一线架构师:6个经典困惑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../ch1/1.2.html">
+            
+                <a href="../ch1/1.2.html">
+            
+                    
+                    1.2. 4个核心主张
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../ch1/1.2.1.html">
+            
+                <a href="../ch1/1.2.1.html">
+            
+                    
+                    1.2.1. 方法体系是大趋势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../ch1/1.2.2.html">
+            
+                <a href="../ch1/1.2.2.html">
+            
+                    
+                    1.2.2. 质疑驱动的架构设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="../ch1/1.2.3.html">
+            
+                <a href="../ch1/1.2.3.html">
+            
+                    
+                    1.2.3. 多阶段还是多视图？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="../ch1/1.2.4.html">
+            
+                <a href="../ch1/1.2.4.html">
+            
+                    
+                    1.2.4. 内置最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../ch1/1.3.html">
+            
+                <a href="../ch1/1.3.html">
+            
+                    
+                    1.3. ADMEMS方法体系:3个阶段，一个贯穿
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../ch1/1.3.1.html">
+            
+                <a href="../ch1/1.3.1.html">
+            
+                    
+                    1.3.1. Pre-architecture阶段：ADMEMS矩阵方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="../ch1/1.3.2.html">
+            
+                <a href="../ch1/1.3.2.html">
+            
+                    
+                    1.3.2. Conceptual Architecture阶段：重大需求塑造做概念架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="../ch1/1.3.3.html">
+            
+                <a href="../ch1/1.3.3.html">
+            
+                    
+                    1.3.3. Refined Architecture阶段:落地的 5 视图方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.4" data-path="../ch1/1.3.4.html">
+            
+                <a href="../ch1/1.3.4.html">
+            
+                    
+                    1.3.4 持续关注非功能需求:“目标-场景-决策”表方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../ch1/1.4.html">
+            
+                <a href="../ch1/1.4.html">
+            
+                    
+                    1.4. 如何解决“6大困惑”
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第一部分 Pre-Architecture阶段</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第2章 Pre-architecture的故事
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="2.1.html">
+            
+                <a href="2.1.html">
+            
+                    
+                    2.1. “不就是一个MIS吗!”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="2.2.html">
+            
+                <a href="2.2.html">
+            
+                    
+                    2.2. “必须把虚拟缓存管理裁剪掉”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.3" data-path="2.3.html">
+            
+                <a href="2.3.html">
+            
+                    
+                    2.3. “都是C++的错，换C重写”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="2.4.html">
+            
+                <a href="2.4.html">
+            
+                    
+                    2.4. 展望“Pre-architecture阶段篇”
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../ch3/">
+            
+                <a href="../ch3/">
+            
+                    
+                    第3章 Pre-architecture总论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../ch3/3.1.html">
+            
+                <a href="../ch3/3.1.html">
+            
+                    
+                    3.1. 什么是Pre-architeture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../ch3/3.2.html">
+            
+                <a href="../ch3/3.2.html">
+            
+                    
+                    3.2. 实际意义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../ch3/3.3.html">
+            
+                <a href="../ch3/3.3.html">
+            
+                    
+                    3.3. 业界现状
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../ch3/3.4.html">
+            
+                <a href="../ch3/3.4.html">
+            
+                    
+                    3.4. 实践要领
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../ch4/">
+            
+                <a href="../ch4/">
+            
+                    
+                    第4章 需求结构化与分析约束影响
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../ch4/4.1.html">
+            
+                <a href="../ch4/4.1.html">
+            
+                    
+                    4.1. 为什么必须进行需求结构化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../ch4/4.2.html">
+            
+                <a href="../ch4/4.2.html">
+            
+                    
+                    4.2. 用ADMEMS矩阵方法进行需求结构化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../ch4/4.3.html">
+            
+                <a href="../ch4/4.3.html">
+            
+                    
+                    4.3. 为什么必须分析约束影响
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../ch4/4.4.html">
+            
+                <a href="../ch4/4.4.html">
+            
+                    
+                    4.4. ADMEMS方法的“约束分类理论”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../ch4/4.5.md">
+            
+                <span>
+            
+                    
+                    Big Picture:架构师应该这样理解约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../ch4/4.6.md">
+            
+                <span>
+            
+                    
+                    4.6. 用ADMEMS矩阵方法辅助约束分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../ch4/4.7.md">
+            
+                <span>
+            
+                    
+                    4.7. 大型B2C网站案例：需求结构化分析与约束影响
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../ch4/4.8.md">
+            
+                <span>
+            
+                    
+                    4.8. 贯穿案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第二部分 Conceptual Architecture阶段</li>
+        
+        
+    
+
+    
+        
+        <li class="header">第三部分 Refined Architecture阶段</li>
+        
+        
+    
+
+    
+        
+        <li class="header">第四部分 非功能目标的方法论</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3. “都是C++的错，换C重写”</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="23-&#x90FD;&#x662F;c&#x7684;&#x9519;&#xFF0C;&#x6362;c&#x91CD;&#x5199;"><a name="23-&#x90FD;&#x662F;c&#x7684;&#x9519;&#xFF0C;&#x6362;c&#x91CD;&#x5199;" class="plugin-anchor" href="#23-&#x90FD;&#x662F;c&#x7684;&#x9519;&#xFF0C;&#x6362;c&#x91CD;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x201C;&#x90FD;&#x662F;C++&#x7684;&#x9519;&#xFF0C;&#x6362;C&#x91CD;&#x5199;&#x201D;</h1>
+<h2 id="231-&#x6545;&#x4E8B;&#xFF1A;&#x653E;&#x5F03;c&#xFF0C;&#x7528;c&#x91CD;&#x5199;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;"><a name="231-&#x6545;&#x4E8B;&#xFF1A;&#x653E;&#x5F03;c&#xFF0C;&#x7528;c&#x91CD;&#x5199;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#231-&#x6545;&#x4E8B;&#xFF1A;&#x653E;&#x5F03;c&#xFF0C;&#x7528;c&#x91CD;&#x5199;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1. &#x6545;&#x4E8B;&#xFF1A;&#x653E;&#x5F03;C++&#xFF0C;&#x7528;C&#x91CD;&#x5199;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;</h2>
+<p>&#x8001;&#x90D1;&#x66FE;&#x7ECF;&#x633A;&#x5F00;&#x5FC3;&#x3002;</p>
+<p>&#x8001;&#x90D1;&#x5728;&#x67D0;&#x7535;&#x4FE1;&#x8F6F;&#x4EF6;&#x4F01;&#x4E1A;&#xFF0C;&#x8D1F;&#x8D23;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x7684;&#x67B6;&#x6784;&#x3002;&#x6700;&#x521D;&#xFF0C;&#x4ED6;&#x975E;&#x5E38;&#x91CD;&#x89C6;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x8BA4;&#x4E3A;&#xFF1A;&#x7535;&#x4FE1;&#x9886;&#x57DF;&#x7528;&#x6237;&#x7FA4;&#x5149;&#xFF0C;&#x6570;&#x636E;&#x91CF;&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#x6027;&#x80FD;&#x7684;&#x538B;&#x529B;&#x5FC5;&#x7136;&#x4F1A;&#x5F88;&#x5927;&#x3002;</p>
+<p>&#x540E;&#x6765;&#xFF0C;&#x4ED6;&#x4EEC;&#x7528;<code>C++</code>&#x5F00;&#x53D1;&#x7684;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x4E0A;&#x7EBF;&#x4E86;&#xFF0C;&#x7528;&#x6237;&#x53CD;&#x6620;&#x5F7C;&#x6B64;&#xFF0C;&#x6027;&#x80FD;&#x633A;&#x9AD8;&#x7684;&#x3002;</p>
+<p>&#x4F46;&#x73B0;&#x5728;&#xFF0C;&#x8001;&#x90D1;&#x5F88;&#x61CA;&#x607C;&#x3002;</p>
+<p>&#x539F;&#x56E0;&#x4F55;&#x5728;&#xFF1F;&#x539F;&#x6765;&#xFF0C;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#x4E00;&#x76F4;&#x9762;&#x4E34;&#x7740;&#x529F;&#x80FD;&#x4E0D;&#x65AD;&#x6539;&#x8FDB;&#x7684;&#x538B;&#x529B;&#xFF0C;&#x6574;&#x4E2A;&#x56E2;&#x961F;&#x4E0D;&#x65AD;&#x81F4;&#x529B;&#x4E8E;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x6269;&#x5C55;&#x6027;--&#x4EE5;&#x4FBF;&#x4E8E;&#x589E;&#x52A0;&#x548C;&#x4FEE;&#x6539;&#x529F;&#x80FD;&#x3002;&#x4F46;&#x59CB;&#x6599;&#x672A;&#x53CA;&#x7684;&#x662F;&#xFF0C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x4E0A;&#x53BB;&#x4E86;&#xFF0C;&#x6027;&#x80FD;&#x4E0B;&#x6765;&#x4E86;&#xFF01;</p>
+<p>&#x770B;&#x7740;&#x7A0B;&#x5E8F;&#x91CC;&#x5BFC;&#x51FA;&#x90FD;&#x662F;&#x63A5;&#x53E3;&#x548C;&#x65E0;&#x5904;&#x4E0D;&#x5728;&#x7684;&#x95F4;&#x63A5;&#x3001;&#x7EE7;&#x627F;&#xFF0C;&#x8001;&#x90D1;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x5371;&#x9669;&#x7684;&#x5FF5;&#x5934;&#xFF0C;&#x90FD;&#x662F;<code>C++</code>&#x7684;&#x9519;&#xFF0C;&#x5E94;&#x8BE5;&#x7528;<code>C</code>&#x91CD;&#x5199;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#xFF01;</p>
+<p><img src="images/&#x90FD;&#x662F;&#x4F60;&#x7684;&#x9519;.png" alt="&#x90FD;&#x662F;&#x4F60;&#x7684;&#x9519;"></p>
+<h2 id="232-&#x63A2;&#x7A76;&#xFF1A;&#x76F8;&#x4E92;&#x77DB;&#x76FE;&#x7684;&#x8D28;&#x91CF;&#x5C5E;&#x6027;"><a name="232-&#x63A2;&#x7A76;&#xFF1A;&#x76F8;&#x4E92;&#x77DB;&#x76FE;&#x7684;&#x8D28;&#x91CF;&#x5C5E;&#x6027;" class="plugin-anchor" href="#232-&#x63A2;&#x7A76;&#xFF1A;&#x76F8;&#x4E92;&#x77DB;&#x76FE;&#x7684;&#x8D28;&#x91CF;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.2. &#x63A2;&#x7A76;&#xFF1A;&#x76F8;&#x4E92;&#x77DB;&#x76FE;&#x7684;&#x8D28;&#x91CF;&#x5C5E;&#x6027;</h2>
+<h3 id="&#x4E92;&#x52A8;&#x95EE;&#x9898;&#xFF1A;"><a name="&#x4E92;&#x52A8;&#x95EE;&#x9898;&#xFF1A;" class="plugin-anchor" href="#&#x4E92;&#x52A8;&#x95EE;&#x9898;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E92;&#x52A8;&#x95EE;&#x9898;&#xFF1A;</h3>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x67D0;&#x516C;&#x53F8;&#x4EE5;<code>C</code>&#x8BED;&#x8A00;&#x66FF;&#x4EE3;<code>C++</code>&#xFF0C;&#x91CD;&#x5199;&#x7535;&#x4FE1;&#x8BA1;&#x8D39;&#x7CFB;&#x7EDF;&#xFF0C;&#x56E0;&#x4E3A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5F15;&#x5165;&#x4E86;&#x592A;&#x591A;&#x62BD;&#x8C61;&#xFF0C;&#x5BFC;&#x81F4;&#x201C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x4E0A;&#x53BB;&#x4E86;&#xFF0C;&#x6027;&#x80FD;&#x4E0B;&#x6765;&#x4E86;&#x201D;&#x3002;&#x6B64;&#x6CD5;&#x53EF;&#x884C;&#x5426;&#xFF1F;</p>
+<ul>
+<li>A. &#x80FD;&#x89E3;&#x51B3;&#x95EE;&#x9898;</li>
+<li>B. &#x4E8E;&#x4E8B;&#x65E0;&#x8865;&#xFF0C;&#x56E0;&#x4E3A;<code>C</code>&#x4E5F;&#x4F1A;&#x8FC7;&#x5EA6;&#x8BBE;&#x8BA1;</li>
+<li>C. &#x95EE;&#x9898;&#x51FA;&#x5728;<code>Pre-Architecture</code></li>
+<li>D. &#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#x4E2D;&#x5FC5;&#x987B;&#x5206;&#x6790;&#x8D28;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4E92;&#x76F8;&#x5F71;&#x54CD;&#xFF0C;&#x5236;&#x5B9A;&#x6743;&#x8861;&#x53D6;&#x820D;&#x7B56;&#x7565;</li>
+</ul>
+<blockquote>
+<p>&#x6B63;&#x786E;&#x7B54;&#x6848;&#xFF1A;B&#x3001;C&#x3001;D</p>
+</blockquote>
+<p><strong>&#x9AD8;&#x6027;&#x80FD;&#x548C;&#x7075;&#x6D3B;&#x6269;&#x5C55;&#x8FD9;&#x4E24;&#x4E2A;&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x77DB;&#x76FE;&#x5173;&#x7CFB;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8981;&#x5BB3;&#x3002;</strong></p>
+<p><img src="images/&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#x5173;&#x7CFB;&#x77E9;&#x9635;.jpg" alt="&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#x5173;&#x7CFB;&#x77E9;&#x9635;"></p>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x5F20;&#x56FE;&#x63ED;&#x793A;&#x4E86;&#x66F4;&#x591A;&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#x4E4B;&#x95F4;&#x7684;&#x201C;&#x4FC3;&#x8FDB;&#x201D;&#x6216;&#x201C;&#x77DB;&#x76FE;&#x201D;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF1A;&#x6027;&#x80FD;&#x548C;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x4E0E;&#x5176;&#x4ED6;&#x8BB8;&#x591A;&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#x90FD;&#x662F;&#x77DB;&#x76FE;&#x7684;&#x3002;</p>
+<p>&#x6B63;&#x786E;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#xFF0C;&#x5C31;&#x5168;&#x76D8;&#x8003;&#x8651;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#x8981;&#x91CD;&#x70B9;&#x5173;&#x6CE8;&#x5173;&#x952E;&#x8D28;&#x91CF;&#x76EE;&#x6807;--&#x4EE5;&#x8001;&#x90D1;&#x4E3A;&#x4F8B;&#xFF0C;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#xFF08;&#x5F53;&#x7136;&#x8FD8;&#x4F1A;&#x6709;&#x5176;&#x4ED6;&#x8D28;&#x91CF;&#x5C5E;&#x6027;&#xFF09;&#x90FD;&#x91CD;&#x8981;&#x3002;</li>
+<li>&#x5728;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5C31;&#x5224;&#x65AD;&#x8FD9;&#x4E9B;&#x201C;&#x5173;&#x952E;&#x8D28;&#x91CF;&#x201D;&#x4E4B;&#x95F4;&#x6709;&#x6CA1;&#x6709;&#x51B2;&#x7A81;&#x5173;&#x7CFB;&#xFF0C;&#x5E76;&#x5236;&#x5B9A;&#x6743;&#x8861;&#x53D6;&#x820D;&#x7B56;&#x7565;--&#x4ECD;&#x4EE5;&#x8001;&#x90D1;&#x4E3A;&#x4F8B;&#xFF0C;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x77DB;&#x76FE;&#xFF0C;&#x6027;&#x80FD;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF0C;&#x8C28;&#x614E;&#x8BC4;&#x5BA1;&#x63D0;&#x9AD8;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x7684;&#x8BBE;&#x8BA1;&#x5BF9;&#x6027;&#x80FD;&#x7684;&#x5F71;&#x54CD;&#x540E;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x91C7;&#x7528;&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.2.html" class="navigation navigation-prev " aria-label="Previous page: 2.2. “必须把虚拟缓存管理裁剪掉”">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.4.html" class="navigation navigation-next " aria-label="Next page: 2.4. 展望“Pre-architecture阶段篇”">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.3. “都是C++的错，换C重写”","level":"3.1.3","depth":2,"next":{"title":"2.4. 展望“Pre-architecture阶段篇”","level":"3.1.4","depth":2,"path":"ch2/2.4.md","ref":"ch2/2.4.md","articles":[]},"previous":{"title":"2.2. “必须把虚拟缓存管理裁剪掉”","level":"3.1.2","depth":2,"path":"ch2/2.2.md","ref":"ch2/2.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","ga","github-buttons"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"tonydeng","repo":"architect-manual","type":"star","size":"small","count":true},{"user":"tonydeng","type":"follow","size":"small","width":"170","count":true},{"user":"tonydeng","repo":"architect-manual","type":"watch","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-80673215-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2/2.3.md","mtime":"2019-09-24T06:08:46.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T06:09:57.194Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
